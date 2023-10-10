@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      body{
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image:url(img/natu2.jpeg) ;
+  height: 100vh;
+
+  }
+
+  form{
+      width: 400px;
+      margin: auto;
+      color: aliceblue;
+
+    }
+div a img{
+    display: flex;
+    margin: auto;
+    width: 80px;
+    box-shadow: 3px 4px 15px 7px aquamarine;
+    box-sizing: border-box;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid orangered;
+    box-sizing: border-box;
+  border-radius: 10px;
+  background-color: aquamarine;
+  color: black;
+}
+input::placeholder{
+  color: black;
+
+}
+input:hover{
+  background-color: white;
+    border: 3px double aquamarine;
+}
+
+input[type=submit] {
+  background-color:  rgb(255, 61, 7);
+  color:black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 3px double aquamarine;
+  box-shadow: 0 0 20px aquamarine;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+button:hover {
+  opacity: 0.6;
+}
+
+.resetbtn {
+  width: auto;
+  padding: 10px 18px;
+
+}
+
+
+
+.container {
+  padding: 36px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 5px;
+}
+video{
+  display:flex;
+
+}
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2 style="text-align: center; font-size: 40px; color: #f1f1f1;"><b>Login</b></h2>
+    <div id="overlay"></div>
+    <form id="loginForm" action="#">
+
+    <div class="imgcontainer">
+        <a href="basic.html" class="Home"><img src="img/logo.png" alt="logo" class="logo" title="logo" ></a>
+    </div>
+
+    <div class="container">
+        <label ><b> Username </b></label>
+        <!-- <input type="text" placeholder="Enter Username  " id="username"  name="uname" required> -->
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+          required/>
+
+        <label ><b>Password</b></label>
+        <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required/>
+
+        <input type="submit" value="Login" />
+
+        <label for="remember">
+        <input type="checkbox" id="remember" name="remember" />
+        Remember me
+        </label>
+
+      </div>
+
+      <div class="container" >
+        <input class="reset btn btn-outline-info" type="reset" value="Reset"  >
+
+        <span class="sn"><a href="#" style="color: aliceblue;">Sign Up?</a></span>
+
+        <span class="psw">Forgot <a href="#" style="color: aliceblue;">password?</a></span>
+
+      </div>
+    </form>
+    <div id="welcomeMessage"></div>
+
+<!-- START _javascript -->
+ 
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // يمنع إعادة تحميل الصفحة عند الضغط على زر الـ Submit
+
+      // استخراج القيم المدخلة من المستخدم
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // يمكنك هنا إجراء عمليات التحقق من صحة اسم المستخدم وكلمة المرور
+      // وإضافة المنطق الخاص بك لتسجيل الدخول هنا
+
+      // مثال بسيط لعرض رسالة ترحيبية إذا نجحت عملية تسجيل الدخول
+      alert("Welcome, " + username + "!");
+    });
+  </script>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- START _javascript -->
+</body>
+</html>

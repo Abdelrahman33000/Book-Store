@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <title>Book_Store</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200&family=Ruwudu&family=Tilt+Prism&display=swap');
+
+            body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-color: lightgray;
+                font-family: sans-serif;
+                overflow-x: hidden;
+            }
+
+            * {
+                margin: 0%;
+                padding: 0%;
+                box-sizing: border-box;
+            }
+
+            .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100vw;
+                justify-content: space-around;
+                padding: 30px 0px;
+            }
+
+            .flex-container>div {
+                background-color: #f1f1f1;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                font-size: 30px;
+                border: 3px rgb(54, 117, 136) solid;
+                box-sizing: border-box;
+                width: fit-content;
+                height: fit-content;
+            }
+
+            .flex-container1 {
+                display: flex;
+                flex-wrap: wrap;
+                width: 100vw;
+                justify-content: space-around;
+            }
+
+            .flex-container1>div {
+                display: inline-block;
+                background-color: #f1f1f1;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                font-size: 30px;
+                border: 3px rgb(54, 117, 136) solid;
+                width: fit-content;
+                height: fit-content;
+            }
+
+            .flex-container a img {
+                box-sizing: border-box;
+                transition: transform 0.9s ease;
+                columns: 4;
+                column-gap: 20px;
+                column-rule: 4px red dotted;
+            }
+
+            .flex-container a img:hover {
+                box-sizing: border-box;
+                transform: scale(1.1);
+                box-shadow: 0 6px 15px 6px rgba(34, 5, 201, 0.603);
+            }
+
+            .flex-container1 a img {
+                box-sizing: border-box;
+                transition: transform 0.9s ease;
+            }
+
+            .flex-container1 a img:hover {
+                box-sizing: border-box;
+                transform: scale(1.1);
+                box-shadow: 0 6px 15px 6px rgba(70, 210, 24, 0.79);
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <body>
+        <!-- START _sup_header -->
+        <header class="container-fluid sticky-top d-flex   p-2  shadow-lg "
+            style="background-image: url(img/a.jpeg) ;background-size: cover;background-position: center; justify-content: space-between; ">
+
+            <div>
+                <a class="navbar-brand" href="basic.html">
+                    <img src="img/logo.png" alt="logo" title="logo" width="40"> </a>
+            </div>
+
+            <div>
+
+                <a href="login.html" style="color: white;">
+                    <div class="btn btn-outline-info text-white">
+                        <i class="fa-solid fa-user" title="login"></i> Sign In
+                    </div>
+                </a>
+
+            </div>
+
+        </header>
+        <!-- END _Sup_header -->
+
+        <!-- START _Navbar -->
+        <nav class="navbar navbar-expand-lg ms-auto sticky-top   navbar-dark bg-dark position:fixed">
+
+            <div class="container-fluid">
+
+                <a class="navbar-brand" href="#"> Book_Store </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <ul class="navbar-nav">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="basic.html"> <i class="fa-solid fa-house"></i> Home </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact1"><i class="fa-solid fa-user"></i> About Us </a>
+                        </li>
+
+                        <li class="nav-items">
+                            <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact Us </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"> Dropdown </a>
+
+                            <!-- STARTS  _Dropdowen -->
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <!-- END _Dropdowen -->
+
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+
+                    </ul>
+
+                    <form class="d-flex ms-auto">
+
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- END _Navbar -->
+
+        <!-- START _ Header -->
+
+        <header>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+                </ol>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <video src="video/Library.mp4" autoplay loop muted class="d-block w-100"></video>
+                    </div>
+
+                    <div class="carousel-item">
+                        <video src="video/Library1.mp4" autoplay loop muted class="d-block w-100"></video>
+                    </div>
+
+                    <div class="carousel-item">
+                        <video src="video/Library2.mp4" autoplay loop muted class="d-block w-100"></video>
+                    </div>
+
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span> </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span> </a>
+            </div>
+
+        </header>
+        <!-- END _Header -->
+
+        <!-- START _ Section_-> Hedear -->
+        <section>
+
+            <div class="row bg-dark bg-gradient ms-auto  text-light">
+
+                <div class="col-md-8 order-md-2">
+                    <h2 class="head p-3 text-center">Book_Store </h2>
+                    <p class="lead">The true identity of the mind emerges after being refined by reading diverse books
+                        and the Book Store offers you an
+                        encyclopedia of books for being the best</p>
+                    <br><br>
+                    <button class="btn btn-outline-info d-flex m-auto  " id="musicButton">تشغيل الموسيقى</button>
+                    <audio autoplay loop id="myAudio" src="music/calm-nature-122814.mp3"></audio>
+                </div>
+
+                <div class="col-md-4 order-md-1">
+
+                    <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <video src="video/Library3.mp4" autoplay loop muted class="d-block w-100"></video>
+                            </div>
+
+                            <div class="carousel-item">
+                                <video src="video/Library4.mp4" autoplay loop muted class="d-block w-100"></video>
+                            </div>
+
+                            <div class="carousel-item">
+                                <video src="video/Library5.mp4" autoplay loop muted class="d-block w-100"></video>
+                            </div>
+
+                        </div>
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </a>
+
+                        <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- END _ Section_-> Hedear -->
+
+        <!-- SATRT _ Main -->
+
+        <main style="background-image: linear-gradient(180deg, rgb(17, 15, 14), #ded2cb)">
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/loj.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/zaka.pdf"><img src="img/zaka.gif" alt="zaka" width="200" height="295"></a></div>
+                <div><a href="pdf/sawra.pdf"><img src="img/sawra.jpg" alt="sawra" width="200" height="295"></a></div>
+                <div><a href="pdf/zekola.pdf"><img src="img/zekola.jpg" alt="zekola" width="200" height="295"></a></div>
+                <div><a href="pdf/akma.pdf"><img src="img/akma.jpg" alt="akma" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/faker.pdf"><img src="img/ap.jpg" alt="faker" width="200" height="295"></a></div>
+                <div><a href="pdf/haya.pdf"><img src="img/haya.jpg" alt="haya" width="200" height="295"></a></div>
+                <div><a href="pdf/rich.pdf"><img src="img/rich.jpg" alt="rich" width="200" height="295"></a></div>
+                <div><a href="pdf/sina.pdf"><img src="img/sina.jpg" alt="sina" width="200" height="295"></a></div>
+            </div>
+
+            <div class="flex-container">
+                <div><a href="pdf/rahel.pdf"><img src="img/sama7_n.jpg" alt="rahel" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin.pdf"><img src="img/3n.jpg" alt="basatin" width="200" height="295"></a></div>
+                <div><a href="pdf/basatin1.pdf"><img src="img/a_n.jpg" alt="basatin1" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/lamobala.pdf"><img src="img/lamobala.jpg" alt="lamobala" width="200" height="295"></a>
+                </div>
+            </div>
+
+            <div class="flex-container1">
+                <div><a href="pdf/waheg.pdf"><img src="img/n.jpg" alt="waheg" width="200" height="295"></a></div>
+                <div><a href="pdf/nagahek.pdf"><img src="img/naga7ek_n.jpg" alt="nagahek" width="200" height="295"></a>
+                </div>
+                <div><a href="pdf/loj.pdf"><img src="img/loj.jpg" alt="loj" width="200" height="295"></a></div>
+                <div><a href="pdf/leknod.pdf"><img src="img/lak.png" alt="leknod" width="200" height="295"></a></div>
+            </div>
+
+        </main>
+
+        <!-- END _Main -->
+
+        <!-- START _Location -->
+        <div id="location">
+            <iframe class="container-fluid m-lg-0  p-0 "
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28394.72424517747!2d31.163818427433704!3d27.17703204536627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14450be607cb7bcd%3A0xba699162bfc01112!2sAsyut%2C%20Al%20Hamraa%20Ath%20Thaneyah%2C%20El%20Fateh%2C%20Assiut%20Governorate!5e0!3m2!1sen!2seg!4v1693554216102!5m2!1sen!2seg"
+                height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- END _Location -->
+
+        <!-- START _About_Us -->
+
+        <section>
+            <div class="row  text-center p-3 bg-dark bg-gradient text-light">
+                <div class="col-12 ms-auto">
+                    <img style="box-shadow: 0 0 10px 5px #e1cfc4;" src="img/abdo.jpg" class=" rounded-circle"
+                        width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img"
+                        aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#777" /></text>
+                    </svg>
+
+                    <h2>Eng- Abdelrahman Abdelwahab</h2>
+                    <p> <a href="https://www.facebook.com/aya.alderwy"><i class="fa-brands fa-facebook"
+                                style="color: blue;"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter" style="color: rgb(18, 139, 175);"></i></a>
+                        <a href="https://www.youtube.com/channel/UCId0PxkvBtl6kJm9rEbVUIA"><i
+                                class="fa-brands fa-youtube" style="color: red;"></i></a>
+                    </p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatem molestias odio
+                    laboriosam. Quos architecto quisquam sed odit,Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Perspiciatis deserunt sapiente a repudiandae. Minus eveniet dicta, adipisci
+                    hic error assumenda, perferendis
+                    laudantium dolorum magnam neque earum vel consequuntur eum maxime.
+                    recusandae quibusdam similique porro vero animi ab natus consectetur. Porro, aliquam sunt.
+                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+
+        </section>
+
+        <!-- END _About_Us -->
+
+
+        <!-- START ======= Contact Section ======= -->
+        <section id="contact" class="contact text-light  text-center p-5"
+            style="background-image: linear-gradient(2300deg, rgb(17, 15, 14), rgb(11, 119, 138));">
+            <h2> Contact_Us</h2>
+            <div class="container" data-aos="fade-up">
+
+                <div class="col-lg-12  mt-lg-0  ">
+
+                    <form action="forms/contact.php" method="post">
+
+                        <div class="row  row-fluid">
+
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Your Email" required>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                    placeholder="Subject" required>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                    required></textarea>
+                            </div>
+
+                            <div class="my-3">
+                                <div class="loading text-light text-center">Loading</div>
+                                <div class="sent-message text-light text-center">Your message has been sent. Thank you!
+                                </div>
+                            </div>
+
+                            <div class="text-center"><button type="submit"
+                                    class="btn btn-outline-info">SendMessage</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- END ======= Contact Section ======= -->
+
+        <!--START ======= Footer ======= -->
+        <footer id="footer1">
+            <div class="footer-top bg-dark bg-gradient text-light p-3">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-info">
+                                <h3>Contact_Us</h3>
+
+                                <p>
+                                    <strong>Assiut :</strong> abu_tij<br>
+                                    <strong>Phone:</strong> <i class="fa-brands fa-square-whatsapp"></i> 01011815928<br>
+                                    <strong>Email:</strong> AboAbdo8600@gmail.com<br>
+                                </p>
+
+                                <h2>social media</h2>
+                                <a href="https://www.facebook.com/aya.alderwy"><i class="fa-brands fa-facebook"
+                                        style="color: blue;"></i></a>
+                                <a href=""><i class="fa-brands fa-twitter" style="color: rgb(18, 139, 175);"></i></a>
+                                <a href="https://www.youtube.com/channel/UCId0PxkvBtl6kJm9rEbVUIA"><i
+                                        class="fa-brands fa-youtube" style="color: red;"></i></a>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-2 col-md-6 footer-links">
+
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Our Services</h4>
+                            <ul>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 footer-newsletter">
+                            <h4>Our Newsletter</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit tempore
+                                corrupti dolore, deleniti minima sapiente. Inventore excepturi culpa soluta suscipit</p>
+
+                            <form action="login.html" method="post">
+                                <input type="email" name="email"><input type="submit" value="Subscribe"
+                                    style="background-color: darkorange; border-radius: 5px;">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ct-footer-copyright text-center bg-dark text-light" data-id="copyright">
+                <p>Copyright © 2023 Book_Store - <a href="https://www.facebook.com/profile.php?id=100069089196548"
+                        style="color: white;">abdelrahman</a></p>
+                <div id="google_translate_element"></div>
+            </div>
+
+        </footer>
+
+        <!--END ======= Footer ======= -->
+
+        <!-- START _JAVASCRIPT -->
+        <script>
+
+            $(document).ready(function () {
+                var audio = document.getElementById("myAudio");
+                var isPlaying = false;
+
+                $("#musicButton").click(function () {
+                    if (isPlaying) {
+                        audio.pause();
+                        isPlaying = false;
+                        $("#musicButton").text("تشغيل الموسيقى");
+                    } else {
+                        audio.play();
+                        isPlaying = true;
+                        $("#musicButton").text("إيقاف الموسيقى");
+                    }
+                });
+            });
+
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+
+            }
+            function openMenu() {
+                document.getElementById("sidebar").classList.toggle('active');
+            }
+        </script>
+        <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="basic.js"></script>
+        <script src="js/all.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+</html>
